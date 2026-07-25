@@ -56,8 +56,9 @@ export default function (pi: ExtensionAPI) {
         // Triggers OMP to re-run skill discovery without needing a restart
         ctx.reload();
       }
-    } catch (err) {
-      pi.logger.error("Failed to auto-configure Matt Pocock skills:", err);
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      pi.logger.error(`Failed to auto-configure Matt Pocock skills: ${message}`);
     }
   });
 }
