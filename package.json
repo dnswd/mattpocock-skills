@@ -1,8 +1,12 @@
 {
   "name": "mattpocock-skills",
   "version": "1.1.0",
-  "private": true,
   "description": "Matt Pocock's agent skills for real engineering",
+  "omp": {
+    "extensions": [
+      "./src/auto-config.ts"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mattpocock/skills"
